@@ -83,20 +83,29 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 15. click on debug and simulate using simulation as shown below 
 
-![image](https://user-images.githubusercontent.com/36288975/233856904-99eb708a-c907-4595-9025-c9dbd89b8879.png)
-
-
-  
+![image](https://user-images.githubusercontent.com/36288975/233856904-99eb708a-c907-4595-9025-c9dbd89b8879.png)  
 
 ## STM 32 CUBE PROGRAM :
-
-
-
+```
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin==GPIO_PIN_5){
+		HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_5);
+	}
+}
+```
 ## Output screen shots of proteus  :
- 
- 
+## LED ON:
+
+ ![img]()
+
+## LED OFF:
+
+ ![img]()
+
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  
+ ![img](https://private-user-images.githubusercontent.com/186716530/560089448-5a788a2b-a567-4e52-bcf7-791cb14a25ad.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMwMzczODUsIm5iZiI6MTc3MzAzNzA4NSwicGF0aCI6Ii8xODY3MTY1MzAvNTYwMDg5NDQ4LTVhNzg4YTJiLWE1NjctNGU1Mi1iY2Y3LTc5MWNiMTRhMjVhZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMwOVQwNjE4MDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMTM4NjZhNjVkYzgwMWE4NjMwZGIyMzQ3MWNlN2Q0NTU2ODNjNDAzNjI4N2IyZDEyYTY1MmI1ZWVkNDA4OTEyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.tZpmg_Dt7CEV9N3BU1t46TJ_CkxNYyV1yLKOatvkGLs)
  
 ## Result :
 Interfacing a push button and interrupt genrateion is simulated using proteus 
